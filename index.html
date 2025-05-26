@@ -162,6 +162,23 @@
             box-shadow: 0 0 10px #ffff00;
         }
     </style>
+
+    <!-- Matomo --><script>
+var _paq = window._paq = window._paq || [];
+_paq.push(['trackAllContentImpressions']);
+_paq.push(['trackPageView']);
+_paq.push(['enableLinkTracking']);
+_paq.push(['alwaysUseSendBeacon']);
+_paq.push(['setTrackerUrl', "\/\/powiedzcospoinformatycznemu.pl\/wp-content\/plugins\/matomo\/app\/matomo.php"]);
+_paq.push(['setSiteId', '1']);
+var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+g.type='text/javascript';
+ g.async=true;
+ g.src="\/\/powiedzcospoinformatycznemu.pl\/wp-content\/uploads\/matomo\/matomo.js";
+ s.parentNode.insertBefore(g,s);
+</script>
+<!-- End Matomo Code -->
+
 </head>
 <body>
     <div id="gameContainer">
@@ -184,25 +201,32 @@
             <h2 style="font-size: 12px; color: #00ffff; margin-bottom: 20px;">Wybierz swojego bohatera:</h2>
             
             <div class="character-grid">
-                <div class="character-card" data-character="maestro">
+                <div class="character-card" data-character="maestro"
+                         data-track-content data-content-name="Maestro Podszywki" data-content-piece="character-card" data-content-target="gra">
+
                     <div class="character-image" style="background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=='); background-color: #663399;"></div>
                     <div class="character-name">MAESTRO PODSZYWKI</div>
                     <div class="character-ability">Wykrywa phishing i złośliwe linki<br>Specjalna: Skanowanie zagrożeń</div>
                 </div>
                 
-                <div class="character-card" data-character="protektor">
+                <div class="character-card" data-character="protektor"
+                         data-track-content data-content-name="PROTEKTOR TAJEMNICY" data-content-piece="character-card" data-content-target="gra">
+
                     <div class="character-image" style="background-color: #4682B4;"></div>
                     <div class="character-name">PROTEKTOR TAJEMNICY</div>
                     <div class="character-ability">Blokuje ataki prywatności<br>Specjalna: Tarcza ochronna</div>
                 </div>
                 
-                <div class="character-card" data-character="bytehunter">
+                <div class="character-card" data-character="bytehunter"
+                 data-track-content data-content-name="BYTEHUNTER" data-content-piece="character-card" data-content-target="gra">
+
                     <div class="character-image" style="background-color: #8B4513;"></div>
                     <div class="character-name">BYTEHUNTER</div>
                     <div class="character-ability">Zbiera dowody cyfrowe<br>Specjalna: Szybkie skanowanie</div>
                 </div>
                 
-                <div class="character-card" data-character="regulator">
+                <div class="character-card" data-character="regulator" data-track-content data-content-name="REGUL8TOR" data-content-piece="character-card" data-content-target="gra">
+
                     <div class="character-image" style="background-color: #8B0000;"></div>
                     <div class="character-name">REGUL8TOR</div>
                     <div class="character-ability">Analizuje kontrakty i zasady<br>Specjalna: Zatrzymanie czasu</div>
@@ -215,8 +239,14 @@
             <h1 style="font-size: 18px; color: #ff0000; margin-bottom: 20px;">MISSION COMPLETE!</h1>
             <div id="finalScore" style="font-size: 14px; color: #00ff00; margin-bottom: 20px;"></div>
             <div id="securityTip" style="font-size: 8px; color: #ffff00; max-width: 400px; line-height: 1.5; margin-bottom: 20px;"></div>
-            <button class="restart-btn" onclick="restartGame()">ZAGRAJ PONOWNIE</button>
-            <button class="restart-btn" onclick="showCharacterSelect()">ZMIEŃ POSTAĆ</button>
+            <button class="restart-btn"
+        onclick="restartGame()"
+        data-track-content data-content-name="Zagraj ponownie" data-content-piece="button" data-content-target="koniec_gry">ZAGRAJ PONOWNIE</button>
+
+<button class="restart-btn"
+        onclick="showCharacterSelect()"
+        data-track-content data-content-name="Zmień postać" data-content-piece="button" data-content-target="koniec_gry">ZMIEŃ POSTAĆ</button>
+
         </div>
     </div>
 
