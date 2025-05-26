@@ -39,11 +39,38 @@ const Home = () => {
 
 const CyberGame = () => {
   useEffect(() => {
-    // Redirect to the game HTML file
-    window.location.href = '/cybersecurity_game.html';
+    // Load the game HTML content directly
+    const gameHTML = `<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberDefender 16-bit - Gra Edukacyjna</title>
+</head>
+<body>
+    <iframe 
+      src="/cybersecurity_game.html" 
+      width="100%" 
+      height="100vh" 
+      frameborder="0"
+      title="Cybersecurity Game"
+    ></iframe>
+</body>
+</html>`;
+    
+    // Open game in new window
+    const gameWindow = window.open('', '_blank');
+    gameWindow.document.write(gameHTML);
+    gameWindow.document.close();
   }, []);
   
-  return <div>Redirecting to game...</div>;
+  return (
+    <div style={{padding: '20px', textAlign: 'center'}}>
+      <h2>Opening Cybersecurity Game...</h2>
+      <p>The game should open in a new window.</p>
+      <p>If it doesn't open, please check your popup blocker settings.</p>
+    </div>
+  );
 };
 
 function App() {
