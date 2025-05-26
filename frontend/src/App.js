@@ -37,6 +37,15 @@ const Home = () => {
   );
 };
 
+const CyberGame = () => {
+  useEffect(() => {
+    // Redirect to the game HTML file
+    window.location.href = '/cybersecurity_game.html';
+  }, []);
+  
+  return <div>Redirecting to game...</div>;
+};
+
 function App() {
   return (
     <div className="App">
@@ -45,6 +54,7 @@ function App() {
           <Route path="/" element={<Home />}>
             <Route index element={<Home />} />
           </Route>
+          <Route path="/cybersecurity_game.html" element={<CyberGame />} />
         </Routes>
       </BrowserRouter>
     </div>
